@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <section class="container">
+
+<!--        <ul class="items">
+            <li class="item">Item 1</li>
+            <li class="item">Item 2</li>
+            <li class="item">Item 3</li>
+        </ul>   -->
+
+        <form id="my-form">
+            <h1>Add User</h1>
+            <div>
+                <label for="name"> Name: </label>
+                <input type="text" id="name">
+            </div>
+            <div>
+                <label for="email"> Email: </label>
+                <input type="text" id="email">
+            </div>
+            <input class="btn" type="submit" value="Submit">
+        </form>
+        
+    
+    </section>
+
+    <script>
+/*        let items_new = document.getElementsByClassName('item');
+        items_new[0].textContent = 'Hello';
+        items_new[0].style.color = 'green';
+        items_new[1].style.color = 'yellow';
+*/  
+        const btn = document.querySelector('.btn')
+
+        // Hover over submit button to view functionalities
+        btn.addEventListener('click', (event_new) => {
+            event_new.preventDefault();
+            document.querySelector('#my-form').style.background = 'blue';
+            console.log('click');
+        });
+
+        btn.addEventListener('mouseover', (event_new1) => {
+            event_new1.preventDefault();
+            document.querySelector('#my-form').style.background = '#ccc';
+            console.log('mouseover');
+        });
+
+        btn.addEventListener('mouseout', (event_new2) => {
+            event_new2.preventDefault();
+            document.querySelector('#my-form').style.background = 'red';
+            console.log('mouseout');
+        })
+    </script>
+</body>
+</html>
+
+<!--function changeLiColor1()
+        {
+            let li = document.getElementById('Hello');
+            li.style.color = 'green';
+        }-->
